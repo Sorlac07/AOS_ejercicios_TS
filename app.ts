@@ -1,11 +1,18 @@
-// 2.	Diseñar un programa TS que permita calcular la suma de los primeros N términos de la siguiente serie: 
-// 64/21		+	62/24		+	60/27		+	58/30		+	…
+// 3.	Construir un programa TS que permita ingresar N números enteros a un vector, 
+//      luego determine el primer número par de las posiciones pares
 
-let number: any = prompt("Ingrese el numero de terminos a sumar: ");
-let number1: number = parseInt(number);
-let suma: number = 0;
-
-for (let i = 0; i < number1; i++) {
-    suma = + suma + (64 - (i * 2)) / (21 + (i * 3));
+let tam: any = prompt("Ingrese el tamaño del vector: ");
+let num1: number = parseInt(tam);
+let vector: number[] = new Array();
+for (let i=0; i<num1; i++ ){
+    let num2: any = prompt("Ingrese el el numero: "); 
+    vector.push(parseInt(num2))
 }
-prompt("La suma es",suma.toString());
+
+for (let i=1; i<num1; i = i+2 ){
+    console.log(i);
+    if (vector[i]%2==0){
+        prompt("El primer numero par de las posiciones pares es: " + vector[i]);
+        break;
+    }
+}
